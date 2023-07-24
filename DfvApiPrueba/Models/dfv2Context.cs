@@ -24,18 +24,19 @@ namespace DfvApiPrueba.Models
         {
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.HasKey(e => e.venfac)
+                entity.HasKey(e => e.ArticleCode)
                     .HasName("PK__products__1E5A0B8E2D96C866");
 
-                entity.ToTable("acccccxc");
+                //entity.ToTable("acccccxc");
+                //entity.
 
-                entity.Property(e => e.venfac).HasColumnName("venfac");
+                entity.Property(e => e.ArticleCode).HasColumnName("ArticleCode");
 
-                entity.Property(e => e.codcli)
+                entity.Property(e => e.ArticleDescription)
                     .IsRequired()
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .HasColumnName("codcli");
+                    .HasColumnName("ArticleDescription");
             });
 
             OnModelCreatingPartial(modelBuilder);

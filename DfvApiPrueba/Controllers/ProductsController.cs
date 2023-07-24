@@ -24,17 +24,21 @@ namespace DfvApiPrueba.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Product>> GetProducts()
         {
-
             if (_context.Products == null)
             {
                 return NotFound();
             }
 
-
             //return await _context.Products.ToListAsync();
             return _context.Products
-      .FromSqlRaw($"SELECT TOP (1) venfac,codcli FROM acccccxc")
-      .ToList();
+                .FromSqlRaw($"exec Glapp_SP_DrugsDeliveryConsumerViewArticles 'admin'")
+                .ToList();
+            
+           /* 
+                return _context.Products
+          .FromSqlRaw($"SELECT TOP (1) venfac,codcli FROM acccccxc")
+          .ToList();
+           */
 
             //_context.Products.FromSqlRaw("SELECT * FROM products").ToList();
         }

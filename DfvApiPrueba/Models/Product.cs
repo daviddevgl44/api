@@ -7,7 +7,7 @@ namespace DfvApiPrueba.Models
 {
     public partial class Product
     {
-        public int venfac { get; set; }
-        public string codcli { get; set; }
+        public string ArticleCode { get; set; }
+        public string ArticleDescription { get; set; }
     }
 }
