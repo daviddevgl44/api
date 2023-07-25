@@ -5,9 +5,12 @@ using System.Collections.Generic;
 
 namespace DfvApiPrueba.Models
 {
-    public partial class Product
+    public partial class Article
     {
         public string ArticleCode { get; set; }
         public string ArticleDescription { get; set; }
+        public string UnitOfMeasure { get; set; }
+        public System.Decimal QuantityAvailable { get; set; }
+        public System.Decimal QuantityToStock { get; set; }
     }
 }

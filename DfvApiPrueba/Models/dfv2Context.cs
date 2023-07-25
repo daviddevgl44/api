@@ -18,11 +18,11 @@ namespace DfvApiPrueba.Models
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Article> Articles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>(entity =>
+            modelBuilder.Entity<Article>(entity =>
             {
                 entity.HasKey(e => e.ArticleCode)
                     .HasName("PK__products__1E5A0B8E2D96C866");
